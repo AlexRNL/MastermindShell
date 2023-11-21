@@ -4,10 +4,10 @@
 
 #include "main.h"
 
-int main(int argc, char *argv[])
+int main(void)
 {
     //      DECLARATION DES CONSTANTES
-    const char e = '\x82' ; //é.
+    const char e = '\x82' ; //ï¿½.
 
     //      DECLARATION DES VARIABLES
     Combinaison code ;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     char choix ;
 
     //      DEBUT DU JEU
-    srand(time(NULL)) ;
+    srand((unsigned int) time(NULL)) ;
     do
     {
           tours = 0 ;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     return 0 ;
 }
 
-//Fonction qui détermine un code secret aléatoire (1..9) :
+//Fonction qui dï¿½termine un code secret alï¿½atoire (1..9) :
 void determiner (Combinaison *code)
 {
      int i ;
@@ -70,7 +70,7 @@ void determiner (Combinaison *code)
      }
 }
 
-//Fonction qui détermine le nombre de chiffres bien placés :
+//Fonction qui dï¿½termine le nombre de chiffres bien placï¿½s :
 int bien_place (Combinaison *code, int joueur[4], int etat_joueur[4])
 {
     int res = 0, i ;
@@ -91,7 +91,7 @@ int bien_place (Combinaison *code, int joueur[4], int etat_joueur[4])
     return res ;
 }
 
-//Fonction qui détermine le nombre de chiffres mal placés :
+//Fonction qui dï¿½termine le nombre de chiffres mal placï¿½s :
 int mal_place (Combinaison *code, int joueur[4], int etat_joueur[4])
 {
     int res = 0, i, j, ok ;
